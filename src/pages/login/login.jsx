@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./log_Sign.css";
 import Axios from "axios";
+import { GoogleLogin } from '@react-oauth/google';
 
 function Login() {
 
@@ -37,7 +38,8 @@ function Login() {
         {/* sign in with google page */}
         <div className="google_sign-in">
         
-        <button type="submit" className="login_google_btn"><img src="public/images/google_icon.webp" className="google_Img"/><p>Sign up with google</p></button>
+        {/* <button type="submit" className="login_google_btn"><img src="public/images/google_icon.webp" className="google_Img"/><p>Sign up with google</p></button> */}
+        <GoogleLogin/>
         </div>
         <h3>Don't have an account <a href="/signup">Sign Up</a></h3>
         </form>
